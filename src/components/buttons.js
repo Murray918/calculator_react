@@ -5,7 +5,7 @@ export default class Buttons extends Component {
 	render() {
 
 		const classHelper = num =>
-			num > 1 ? 'five columns' : 'three columns'
+			num > 1 ? 'five columns zero' : 'three columns'
 
 
 		const btns = buttons.map((btn, index) => {
@@ -14,17 +14,17 @@ export default class Buttons extends Component {
 			return (
 				<div key={index}>
 					<button
-						className={'btn ' + classHelper(size) + ' ' + btn.color}
+						className={'btn button ' + classHelper(size) + ' ' + btn.color}
 						value={btn.name}
 						onClick={this.props.handler}>
-						{btn.name}
+						<h6>{btn.name}</h6>
 					</button>
 				</div>
 			)
 		})
 		return (
 
-			<div className='row'>
+			<div className='row btn-container'>
 				{btns}
 			</div>
 

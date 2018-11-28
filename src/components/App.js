@@ -27,8 +27,11 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <Display value={this.state.value} />
-        <Buttons handler={this.handler} />
+        <div className="calculator">
+        <h5 className="brand">Calculator</h5>
+          <Display value={this.state.value} />
+          <Buttons handler={this.handler} />
+        </div>
       </div>
     );
   }
