@@ -12,11 +12,12 @@ class App extends Component {
     }
     this.handler = this.handler.bind(this)
   }
-  argHelper = (string) => string !== '0'
 
   handler(e) {
     e.preventDefault()
+    console.log(e.target)
     let arg = e.target.value
+    console.log('the arg is : ',arg)
     let newValue = calculate(this.state.value, arg)
     console.log(newValue)
     this.setState({

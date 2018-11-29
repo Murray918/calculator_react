@@ -10,14 +10,14 @@ export default class Buttons extends Component {
 
 		const btns = buttons.map((btn, index) => {
 			let size = parseInt(btn.size)
-			console.log(size)
+			console.log('this is the button name')
 			return (
 				<div key={index}>
 					<button
 						className={'btn button ' + classHelper(size) + ' ' + btn.color}
 						value={btn.name}
 						onClick={this.props.handler}>
-						<h6>{btn.name}</h6>
+					{btn.name}
 					</button>
 				</div>
 			)
