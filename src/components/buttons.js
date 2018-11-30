@@ -3,7 +3,7 @@ import buttons from '../logic/butnArray'
 
 export default class Buttons extends Component {
 	render() {
-
+		//this tells the component which class to add to our button
 		const classHelper = num =>
 			num > 1 ? 'five columns zero' : 'three columns'
 
@@ -16,7 +16,7 @@ export default class Buttons extends Component {
 					<button
 						className={'btn button ' + classHelper(size) + ' ' + btn.color}
 						value={btn.name}
-						onClick={this.props.handler}>
+						onClick={this.props.handleOnClick}>
 					{btn.name}
 					</button>
 				</div>
